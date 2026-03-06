@@ -14,6 +14,14 @@ document.querySelectorAll('.nav__links a').forEach(link => {
   });
 });
 
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+  if (links.classList.contains('open') && !links.contains(e.target) && !toggle.contains(e.target)) {
+    links.classList.remove('open');
+    toggle.classList.remove('active');
+  }
+});
+
 // Navbar shadow on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {

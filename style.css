@@ -839,7 +839,7 @@ address { font-style: normal; }
 }
 
 @media (max-width: 768px) {
-  .nav__toggle { display: flex; }
+  .nav__toggle { display: flex; position: relative; z-index: 100; }
   .nav__cta { display: none; }
 
   .nav__links {
